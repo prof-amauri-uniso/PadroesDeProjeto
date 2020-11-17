@@ -15,3 +15,5 @@ Quem possuiam métodos comuns a patos reais, porém quando se insere classes com
 Que não deve voar temos um problema de design. A proposta desenvolvida nesse pacote é 
 desenvolver esse problema e utilizando técnicas de orientação a objetos solucionar esse
 problema de design
+
+OBS: Exemplos baseados no livro Use a Cabeça Padrões de Projeto da O'Reilly/AltaBooks
