@@ -33,6 +33,9 @@ aplicar dois conceitos de projetos:
 
 A primeira implementação dessa forma está na branch "Versao1.0"
 
+Versao2.0 - Temos o exemplo de uma implementação com um pato definindo dinamicamente seu 
+tipo de voo
+
 
 
 OBS: Exemplos baseados no livro Use a Cabeça Padrões de Projeto da O'Reilly/AltaBooks

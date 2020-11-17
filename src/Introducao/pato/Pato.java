@@ -24,4 +24,12 @@ public abstract class Pato {
     public void nadar(){
         System.out.println("Todos patos boiam, inclusive de madeira!");
     }
+
+    public void setComportamentoVoo(ComportamentoVoo voo){
+        this.comportamentoVoo = voo;
+    }
+
+    public void setComportamentoQuack(ComportamentoQuack quack){
+        this.comportamentoQuack = quack;
+    }
 }
