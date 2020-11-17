@@ -31,7 +31,7 @@ aplicar dois conceitos de projetos:
 
 **- Separar em classes prórprias código mais sujeito a mudança**
 
-A primeira implementação dessa forma está no commit "versão 1.0"
+A primeira implementação dessa forma está na branch "Versao1.0"
 
 
 
