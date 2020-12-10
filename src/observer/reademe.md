@@ -7,7 +7,7 @@ reais, o objeto WheatherData, que monitora os dados vindos dos dispositivos e o 
 que mostra aos usuários as condições meteorológicas.
 
 A tarefa é criar um aplicativo que utilize o WeatherData para atualizar três exibições
-de confições atuais, status meteorológico e uma previsão.
+de condições atuais, status meteorológico e uma previsão.
 
 A classe WeatherData tem os métodos getTemperatura(), getHumidade() e getPressao() que 
 sabem como obter esses dados dos equipamentos. É preciso implementar mudancaNasMedidas() 
@@ -22,3 +22,11 @@ Temos então:
  condições atuais e previsão;
  - O sistema deve ser expansivel, outros desenvolvedores podem criar novos elementos
  de exibição.
+ 
+ **Definição do padrão Observer**
+ O padrão observer define a dependência um-para-muitos entre objetos para que quando um 
+ objeto mude de estado todos os seus dependentes sejam avisados e atualizados automaticamente.
+ 
+ 
+ _**Principio de projeto**_
+ Busque desgigns levemente ligados entre objetos que interagem.
