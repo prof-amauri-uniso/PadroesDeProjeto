@@ -30,3 +30,12 @@ Temos então:
  
  _**Principio de projeto**_
  Busque desgigns levemente ligados entre objetos que interagem.
+ 
+ Implementações:
+  - branch v1.0-observer: primeira versão com o padrão sendo implementado sem suporte
+  a recursos nativos no java.
+  - branch v2.0-observer: implementação usando os recursos do java.
+  
+  O uso dos artefatos disponibilizados pelo java podem limitar as aplicações.
+  Isso porque violamos o principio de programar para interfaces, já que Observable é 
+  uma classe concreta que extendemos. 

@@ -1,44 +1,26 @@
 package observer.subject;
 
-import observer.observer.Observador;
+import java.util.Observable;
+import java.util.Observer;
 
 import java.util.ArrayList;
 
-public class WheatherData  implements Sujeito{
+public class WheatherData extends Observable{
 
-    private ArrayList<Observador> observadores;
+    // Não precisamos mais do arraylist para guardar os observadores
     private float temperatura;
     private float umidade;
     private float pressao;
 
     public WheatherData(){
-        observadores = new ArrayList<>();
-    }
-
-    @Override
-    public void registrarObservador(Observador o) {
-
-        observadores.add(o);
-    }
-
-    @Override
-    public void removerObservador(Observador o) {
-
-        int i = observadores.indexOf(o);
-        if(i >=0 )
-            observadores.remove(i);
 
     }
 
-    @Override
-    public void notificarObservdores() {
-        observadores.forEach(obs -> {
-             obs.atualizar(this.temperatura, this.umidade, this.pressao);
-        });
-    }
 
     public void mudancaDeMedidas(){
-        notificarObservdores();
+        setChanged();
+        //Não estamos enviando um objeto de dados, portanto os observadores terão que recuperar os dads eles mesmos
+        notifyObservers();
     }
 
     public void setMedidas(float temperatura, float umidade, float pressao){
@@ -46,5 +28,18 @@ public class WheatherData  implements Sujeito{
         this.umidade = umidade;
         this.pressao = pressao;
         mudancaDeMedidas();
+    }
+
+    //Precisamos dos getters já que os próprios observadores quem recueperarão os dados.
+    public float getTemperatura() {
+        return temperatura;
+    }
+
+    public float getUmidade() {
+        return umidade;
+    }
+
+    public float getPressao() {
+        return pressao;
     }
 }

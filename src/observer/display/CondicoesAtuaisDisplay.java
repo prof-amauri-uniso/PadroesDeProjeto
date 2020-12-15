@@ -1,17 +1,19 @@
 package observer.display;
 
-import observer.observer.Observador;
-import observer.subject.Sujeito;
+import observer.subject.WheatherData;
 
-public class CondicoesAtuaisDisplay implements Observador, ElementoDisplay {
+import java.util.Observer;
+import java.util.Observable;
 
+public class CondicoesAtuaisDisplay implements Observer, ElementoDisplay {
+
+    Observable weatherData;
     private float temperatura;
     private float umidade;
-    private Sujeito weatherData;
 
-    public CondicoesAtuaisDisplay(Sujeito weatherData){
+    public CondicoesAtuaisDisplay(Observable weatherData){
         this.weatherData = weatherData;
-        weatherData.registrarObservador(this);
+        weatherData.addObserver(this);
     }
 
     @Override
@@ -24,10 +26,10 @@ public class CondicoesAtuaisDisplay implements Observador, ElementoDisplay {
     }
 
     @Override
-    public void atualizar(float temp, float umidade, float pressao) {
-        this.temperatura = temp;
-        this.umidade = umidade;
+    public void update(Observable obs, Object arg) {
+        WheatherData weatherData = (WheatherData) obs;
+        this.temperatura = weatherData.getTemperatura();
+        this.umidade = weatherData.getUmidade();
         display();
-
     }
 }
