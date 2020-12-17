@@ -11,6 +11,8 @@ pensar na arquitetura e não nos objetos ou problemas isoladamente.
 
 Nomes dos pacotes
 
-`introducao` - Introdução aos conceitos e o padrão STRATEGY
+`introducao` - Introdução aos conceitos e o padrão STRATEGY **pacote introducao**
 
-`estação metereológica` - Padrão observer
+`estação metereológica` - Padrão observer **pacote observer**
+
+`cafeteria` - Padrão decorator **pacote decorator**
