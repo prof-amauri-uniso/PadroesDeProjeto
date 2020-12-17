@@ -29,7 +29,7 @@ aplicar três conceitos de projetos:
 
 **- Programar para interfaces**
 
-**- Separar em classes prórprias código mais sujeito a mudança**
+**- Separar em classes próprias código mais sujeito a mudança**
 
 **- Dar prioridade á composição**
 

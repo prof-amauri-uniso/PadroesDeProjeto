@@ -29,7 +29,8 @@ Temos então:
  
  
  _**Principio de projeto**_
- Busque desgigns levemente ligados entre objetos que interagem.
+ 
+ Busque designs levemente ligados entre objetos que interagem.
  
  Implementações:
   - branch v1.0-observer: primeira versão com o padrão sendo implementado sem suporte
