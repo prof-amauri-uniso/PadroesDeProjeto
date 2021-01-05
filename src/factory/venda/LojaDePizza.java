@@ -2,21 +2,17 @@ package factory.venda;
 
 import factory.factorys.SimplesPizzaFactory;
 import factory.pizza.Pizza;
+import factory.pizza.PizzaDePepperoni;
+import factory.pizza.PizzaDeQueijo;
 
-public class LojaDePizza {
+// Tornamos a classe de Loja abstrata, pois vamos querrer criar lojas com diferenças regionais.
+public abstract class LojaDePizza {
 
-    /*A classe cliente, que irá utilizar as instancias dos objetos, precisa que a factory seja disponibilizado por
-    * composição*/
-    SimplesPizzaFactory factory;
-
-    // No construtor garantimos que teremos uma factory para instanciar as pizzas
-    public LojaDePizza(SimplesPizzaFactory factory){
-        this.factory = factory;
-    }
 
     public Pizza pedirPizza(String tipo){
         Pizza pizza;
-        pizza = factory.criarPizza(tipo);
+        // Aqui não temos mais a classe de factory, mas sim um método abstrato
+        pizza = criarPizza(tipo);
         pizza.preparar();
         pizza.assar();
         pizza.cortar();
@@ -24,4 +20,8 @@ public class LojaDePizza {
 
         return pizza;
     }
+
+    /*O método de criação de pizza retorna para a loja, mas abstrato, assim cada pizarria reginal poderá decidir as
+    * instancias de pizzas que serão criadas*/
+    public abstract Pizza criarPizza(String tipo);
 }
