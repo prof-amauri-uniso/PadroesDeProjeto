@@ -12,10 +12,10 @@ public class SimplesPizzaFactory {
         Pizza pizza = null;
 
         if(tipo.equals("queijo")){
-            pizza = new PizzaDeQueijo();
+            //pizza = new PizzaDeQueijo();
         }
         else if(tipo.equals("pepperoni")){
-            pizza = new PizzaDePepperoni();
+            //pizza = new PizzaDePepperoni();
         }
 
         return pizza;
