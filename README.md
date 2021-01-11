@@ -18,3 +18,5 @@ Nomes dos pacotes
 `cafeteria` - Padrão decorator **`pacote decorator`**
 
 `pizzaria` - Padrão Factory **`pacote factory`**
+
+`fabrica de chocolate` - Padrão Factory **`pacote singleton`**
