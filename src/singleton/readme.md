@@ -12,4 +12,6 @@
  Para controlar isso apenas uma instancia da classe para controlar a caldeira pode 
  existir.
  
- `v1.0-singleton` - Versão inicial básica 
+ `v1.0-singleton` - Versão inicial básica
+ 
+ `v2.0-singleton` - Versão sincronizada

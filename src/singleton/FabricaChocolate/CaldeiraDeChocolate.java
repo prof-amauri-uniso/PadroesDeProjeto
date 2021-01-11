@@ -16,9 +16,16 @@ public class CaldeiraDeChocolate {
         fervida = true;
     }
 
-    /*Aqui temos o método estático que irá retornar a instancia. Como ele é estatico, é um método de classe, pode
-    * ser chamado mesmo que a mesma ainda não tenha uma instancia.*/
-    public static CaldeiraDeChocolate getInstance(){
+    /*Caso múltiplos segmentos (Threads) façam uso da instancia, podemos ter um problema de quando a instancia é criada
+    * ocasionando mais instancias. Se a verificação de null for feita em um momento em que outro segmento estiver
+    * chamando a mesma verificação, os dois segmentos podem chegar no ponto de criar uma nova instancia, gerando
+    * assim duas instancias. Esse problema é muito díficil de depurar quando ocorre. Para evitar esse acesso concorrente
+    * desordenado, usamos a palavra reservada syncronyzed, que informa para a JVM que o método só pode ser acessado
+    * por um segmento por vez e quando o feito, ele deve ser executado até o fim antes que outro segmento
+    * possa executar. Dessa forma, resolvemos o problema. Métodos sincornizados são caros do ponto de vista computacional
+    * pois afetam desempenho. Se o método ser sincronizado não causar um impacto muito grande, apenas a sincronização
+    * já é uma boa sulução para evitar problemas de aceso de multiplos segmentos.*/
+    public static synchronized CaldeiraDeChocolate getInstance(){
         if (caldeiraUnica == null){
             caldeiraUnica = new CaldeiraDeChocolate();
         }
