@@ -16,4 +16,6 @@
  
  `v2.0-singleton` - Versão sincronizada
  
-  `v3.0-singleton` - Versão com criação de instancia inicial
+ `v3.0-singleton` - Versão com criação de instancia inicial
+ 
+ `v4.0-singleton` - Versão com criação volatile
