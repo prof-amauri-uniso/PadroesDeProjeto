@@ -12,3 +12,5 @@ recursos de cancelamento de operações
  produtos de diferentes fornecedores de automação residencial (luzes, tv, etc), associar
  esses produtos com o controle e para cada produto associado terão dois botões: liga 
  e desliga. Dessa forma o objetivo é um controle remoto com funções customizavies.
+ 
+ `v1.0-command` - Versão inicial com controle remoto simples
