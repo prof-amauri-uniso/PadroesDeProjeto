@@ -1,6 +1,6 @@
 **Definição do padrão Command**
 
-O padrão Command encapsulça solicitações como um objeto, o que lhe permite parametrizar
+O padrão Command encapsula solicitações como um objeto, o que lhe permite parametrizar
 outros objetos com diferentes solicitações, enfileirar ou registrar solicitações e implementar 
 recursos de cancelamento de operações
  
