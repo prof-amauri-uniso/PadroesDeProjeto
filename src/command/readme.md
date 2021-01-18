@@ -21,5 +21,12 @@ recursos de cancelamento de operações
  
  `v4.0-command` - Desfazer usando estado
  
+ Uma outra possbilidade de uso de command é com a criação de macro comandos.
+ Esses macro comandos possuem um conjunto de commandos que será exeecutados todos ao mesmo
+ tempo. Por exemplo, um macrocomando para o verão, onde liga TV e arcondicionado  
+ em diferentes comodos. Criariamos uma classe com um array de comandos, adiconariamos
+ os que fossem necessários, e no executar() do macro comando chamariamos o executar
+ de cada comando individual que compoe o macrocomando.
+ 
  
  
