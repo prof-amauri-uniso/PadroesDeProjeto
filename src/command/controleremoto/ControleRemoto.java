@@ -11,16 +11,24 @@ public class ControleRemoto {
     * Armazenamos esses comandos nesse em vetores*/
     Command[] ligarCommands;
     Command[] desligarCommands;
+    /*Para imlementarmos uma funcionalidade para desfazer a última operação, iremos necessitar de uma variavel onde
+    * armazenaremos o último elemento que foi acionado*/
+    Command desfazerCommand;
 
     public ControleRemoto(){
         ligarCommands = new Command[7];
         desligarCommands = new Command[7];
 
         /*Criamos uma classe de comando vazio apenas para poder inicializar os comandos.
-        * Como command é uma interface funcional (possui apenas um método para ser sobrescrito) podemos usar
-        * a sintaxe com lambda*/
-        Command commandVazio = () -> {
-            System.out.println("Comando Vazio");
+        * Como agora temos mais de um método em nossa interface, a sintaxe de lambda não mais nos atende.
+        * Usaremos uma classe anonima para não precisarmos criar uma nova classe.*/
+        Command commandVazio = new Command() {
+            /*Os métodos não precisam fazer nada*/
+            @Override
+            public void executar() {}
+
+            @Override
+            public void desfazer() {}
         };
 
         /*Aqui inicializamos os vetores. Não usamos tipos mais eficientes de loops porque seria necessário
@@ -30,6 +38,9 @@ public class ControleRemoto {
             ligarCommands[i] = commandVazio;
             desligarCommands[i] = commandVazio;
         }
+
+        /*Precisamos inicializar a opção de desfazer também para evitarmos chamar métodos em elementos nulos*/
+        desfazerCommand = commandVazio;
     }
 
     /*Agora quando vamos associar os comandos, fazemos em pares, pois para cada recurso que será configurado no controle,
@@ -42,9 +53,19 @@ public class ControleRemoto {
     /*Quando botão é pressionaldo invoca esse método.*/
     public void botaoLigarFoiPressionado(int espacoNoControle){
         ligarCommands[espacoNoControle].executar();
+        /*Sempre que um botão for pressionado, atualizamos a variavel para desfazer*/
+        desfazerCommand = ligarCommands[espacoNoControle];
     }
+
     public void botaoDesligarFoiPressionado(int espacoNoControle){
         desligarCommands[espacoNoControle].executar();
+        /*Sempre que um botão for pressionado, atualizamos a variavel para desfazer*/
+        desfazerCommand = desligarCommands[espacoNoControle];
+    }
+
+    /*Precisamos de um método para tratar quando o botão de desfazer no controle for pressionado*/
+    public void botaoDesfazerFoiPressionado(){
+        desfazerCommand.desfazer();
     }
 
     @Override

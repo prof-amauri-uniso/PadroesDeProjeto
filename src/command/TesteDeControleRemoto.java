@@ -24,6 +24,8 @@ public class TesteDeControleRemoto {
         System.out.println(controle);
         controle.botaoLigarFoiPressionado(0);
         controle.botaoDesligarFoiPressionado(0);
+        //Testando refazer
+        controle.botaoDesfazerFoiPressionado();
 
 
     }

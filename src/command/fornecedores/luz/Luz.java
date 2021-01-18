@@ -10,7 +10,7 @@ public class Luz {
     }
 
     public void desligar(){
-        this.acesa = true;
+        this.acesa = false;
         System.out.println("Luz acessa: " + this.acesa);
     }
 }

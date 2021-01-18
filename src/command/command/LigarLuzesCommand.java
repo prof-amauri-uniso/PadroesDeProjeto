@@ -21,4 +21,13 @@ public class LigarLuzesCommand implements Command{
         luz.ligar();
 
     }
+
+    /*O método desfazer precisa ser implementado em cada classe concreta. No caso da luz, o desfazer de desligar será
+     * ligar*/
+    @Override
+    public void desfazer() {
+
+        luz.desligar();
+
+    }
 }
