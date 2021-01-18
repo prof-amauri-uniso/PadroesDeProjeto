@@ -28,5 +28,13 @@ recursos de cancelamento de operações
  os que fossem necessários, e no executar() do macro comando chamariamos o executar
  de cada comando individual que compoe o macrocomando.
  
+ **Uso do padrão Command para filas de processamento**
+ 
+ Como fica transparente para o cliente o que deverá ser executado, é possivel 
+ usar o padrão para criar uma fila de processamento. Ao se criar o objeto command,
+ ele é colocado em uma fila. Um outro agente retira os itens da fila e em seguida
+ executa o método executar() do objeto. Não importa o que será processado, pois 
+ o agente conhece apenas o método executar. 
+ 
  
  
