@@ -14,3 +14,5 @@ recursos de cancelamento de operações
  e desliga. Dessa forma o objetivo é um controle remoto com funções customizavies.
  
  `v1.0-command` - Versão inicial com controle remoto simples
+ `v2.0-command` - Atribuindo comandos a slots no controle remoto
+ 
