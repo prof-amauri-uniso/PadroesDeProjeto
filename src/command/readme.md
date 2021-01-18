@@ -19,3 +19,7 @@ recursos de cancelamento de operações
  
  `v3.0-command` - Desfazer simples
  
+ `v4.0-command` - Desfazer usando estado
+ 
+ 
+ 

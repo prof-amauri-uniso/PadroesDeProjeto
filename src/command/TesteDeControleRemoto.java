@@ -1,9 +1,12 @@
 package command;
 
+import command.command.Command;
 import command.command.DesligarLuzesCommand;
 import command.command.LigarLuzesCommand;
+import command.command.VentiladorDeTetoVelocidadeAltaCommand;
 import command.controleremoto.ControleRemoto;
 import command.fornecedores.luz.Luz;
+import command.fornecedores.ventiladordeteto.VentiladorDeTeto;
 
 /*Aqui temos o cliente  do padrão comando*/
 public class TesteDeControleRemoto {
@@ -26,6 +29,8 @@ public class TesteDeControleRemoto {
         controle.botaoDesligarFoiPressionado(0);
         //Testando refazer
         controle.botaoDesfazerFoiPressionado();
+
+
 
 
     }
