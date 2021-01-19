@@ -20,3 +20,7 @@ Nomes dos pacotes
 `pizzaria` - Padrão Factory **`pacote factory`**
 
 `fabrica de chocolate` - Padrão Factory **`pacote singleton`**
+
+`controle remoto universal` - Padrão Command **`pacote command`**
+
+`patos e enumeration` - Padrão Adapter **`pacote adapter`**
