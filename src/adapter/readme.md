@@ -20,3 +20,16 @@ o código, criamos uma adaptador de peru para pato, e assim todo o código que e
 um pato fica inalterado.
  
  `v1.0-adapter` - Exemplo com patos
+ 
+ Versões antigas da biblioteca e coleções do java utilizava a interace Enumeration
+ para percorrer as coleções. Ela não possuia método para remover itens da coleção.
+ Isso mudou com uma implementação posterior, onde foi criada uma nova interface
+ para lidar com as coleçãos, o Iterator. Essa sim possuia métodos para remover itens.
+ Porém, existe a possibilidade de sistemas legados ainda utilizarem a interface 
+ Enumration antiga, sendo necessário que para novas funcionalidades utilizando
+ Iterator precisem se um adaptador. O inverso também pode ocorrer, um sistema
+ legado que precisam interagir com sistemas novos utilizando Iterator.
+  
+ `v1.0-adapter` - Exemplo com patos
+ `v2.0-adapter` - Exemplo adaptando Enumerator para Iterator do java
+ 
