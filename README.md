@@ -24,3 +24,5 @@ Nomes dos pacotes
 `controle remoto universal` - Padrão Command **`pacote command`**
 
 `patos e enumeration` - Padrão Adapter **`pacote adapter`**
+
+Amauri
